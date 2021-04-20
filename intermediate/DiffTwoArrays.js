@@ -21,3 +21,14 @@ function diffArray(arr1, arr2) {
 }
 
 diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+
+// Other solutions make use of a -1 index showing that the item is not in the array.
+
+function diffArray2(arr1, arr2) {
+  // filter each array for the absent members
+  var filteredArr1 = arr1.filter((el) => arr2.indexOf(el) === -1),
+    filteredArr2 = arr2.filter((el) => arr1.indexOf(el) === -1);
+
+  // merge both sets of absent members
+  return filteredArr1.concat(filteredArr2);
+}
