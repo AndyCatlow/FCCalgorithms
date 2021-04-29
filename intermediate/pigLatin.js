@@ -8,11 +8,18 @@
 // Translate the provided string to Pig Latin. Input strings are guaranteed to be English words in all lowercase.
 
 function translatePigLatin(str) {
-    if(no vowels){add "ay" to end}
-    if(first letter is consonant){move letter to end 
-    rerun}
-    if(first leter is vowel){add "ay" to end}
-    return str;
+  let vowels = /[aeiou]/;
+  if (str.match(vowels) === null) {
+    console.log(`${str}ay`);
   }
-  
-  translatePigLatin("consonant");
+  if (str[0].match(vowels) === null) {
+    console.log("firstcon");
+  }
+  if (str[0].match(vowels) !== null) {
+    console.log("firstvow");
+  }
+  // if(first leter is vowel){add "ay" to end}
+  // return str;
+}
+
+translatePigLatin("consonant");
