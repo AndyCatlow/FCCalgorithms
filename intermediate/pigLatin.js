@@ -16,7 +16,7 @@ function translatePigLatin(str) {
     console.log("firstcon");
   }
   if (str[0].match(vowels) !== null) {
-    console.log("firstvow");
+    console.log(`${str}may`);
   }
   // if(first leter is vowel){add "ay" to end}
   // return str;
