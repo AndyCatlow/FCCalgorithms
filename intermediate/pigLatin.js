@@ -9,17 +9,32 @@
 
 function translatePigLatin(str) {
   let vowels = /[aeiou]/;
-  if (str.match(vowels) === null) {
-    console.log(`${str}ay`);
-  }
-  if (str[0].match(vowels) === null) {
-    console.log("firstcon");
+  let pigStr;
+  if (str.search(vowels) === -1) {
+    pigStr = str + "ay";
+    console.log(pigStr);
+    return pigStr;
   }
   if (str[0].match(vowels) !== null) {
-    console.log(`${str}may`);
+    pigStr = str + "way";
+    console.log(pigStr);
+    return pigStr;
   }
-  // if(first leter is vowel){add "ay" to end}
-  // return str;
+  if (str[0].match(vowels) === null) {
+    let strArr = str.split("");
+    let move = (arr) => {
+      if (arr[0].match(vowels) !== null) {
+        return (pigStr = arr.join("") + "ay");
+      }
+      if (arr[0].match(vowels) === null) {
+        let mover = arr.shift();
+        arr.push(mover);
+      }
+      move(arr);
+    };
+    move(strArr);
+  }
+  console.log(pigStr);
 }
 
-translatePigLatin("consonant");
+translatePigLatin("rhythm");
