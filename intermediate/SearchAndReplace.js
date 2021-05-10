@@ -18,7 +18,7 @@ function myReplace(str, before, after) {
   if (str[result].match(/[A-Z]/)) {
     after = after.charAt(0).toUpperCase() + after.slice(1);
   } else {
-    after = after.charAt(0).toLowerCase();
+    after = after.charAt(0).toLowerCase() + after.slice(1);
   }
 
   console.log(after);
