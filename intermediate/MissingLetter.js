@@ -5,6 +5,7 @@
 
 function fearNotLetter(str) {
   let missing;
+  let missingChar;
   for (let i = 0; i < str.length - 1; i++) {
     // get unicode value of character, compare to next in list
 
@@ -14,7 +15,9 @@ function fearNotLetter(str) {
     }
   }
   // convert the unicode back to a letter
-  let missingChar = String.fromCharCode(missing);
+  if (missing) {
+    missingChar = String.fromCharCode(missing);
+  }
 
   return missingChar;
 }
