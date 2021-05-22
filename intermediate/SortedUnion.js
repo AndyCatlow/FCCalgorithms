@@ -8,7 +8,22 @@
 // Check the assertion tests for examples.
 
 function uniteUnique(arr) {
-  return arr;
+  let input = Array.from(arguments);
+  console.log(input);
+  let unique = [];
+  let dupes = [];
+  for (let i = 0; i < input.length; i++) {
+    for (let j = 0; j < input[i].length; j++) {
+      if (unique.includes(input[i][j])) {
+        dupes.push(input[i][j]);
+      } else {
+        unique.push(input[i][j]);
+      }
+    }
+  }
+  console.log(unique);
+
+  return unique;
 }
 
 uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
