@@ -27,3 +27,7 @@ function uniteUnique(arr) {
 }
 
 uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+
+//          spread arguments        spread new array from Set function
+const uniteUnique = (...arr) => [...new Set(arr.flat())];
+// Set returns an object of unique values. It checks for uniqueness before passing each value on on.
