@@ -7,7 +7,7 @@
 
 function sumFibs(num) {
   if (num < 2) {
-    return console.log(num);
+    return num;
   }
   let fibArr = fib(num);
   // console.log(fibArr)
