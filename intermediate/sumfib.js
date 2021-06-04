@@ -19,9 +19,11 @@ function sumFibs(num) {
   let fibOdd = fibArr.filter(checkSize);
   // console.log(fibOdd)
 
-  return sum(fibOdd);
-
-  //  fibOdd.reduce()
+  //   return sum(fibOdd);
+  // use reduce instead of sum function
+  return fibOdd.reduce((a, b) => {
+    return a + b;
+  });
 }
 
 sumFibs(75025);
@@ -34,10 +36,10 @@ function fib(n) {
   return arr;
 }
 
-function sum(arr) {
-  let total = 0;
-  for (let i = 0; i < arr.length; i++) {
-    total += arr[i];
-  }
-  return total;
-}
+// function sum(arr) {
+//   let total = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     total += arr[i];
+//   }
+//   return total;
+// }
