@@ -4,3 +4,19 @@
 // The range will be an array of two numbers that will not necessarily be in numerical order.
 
 // For example, if given 1 and 3, find the smallest common multiple of both 1 and 3 that is also evenly divisible by all numbers between 1 and 3. The answer here would be 6.
+
+// nice solution from JanEgbers
+function smallestCommons(arr) {
+  var max = Math.max(arr[0], arr[1]);
+  var min = Math.min(arr[0], arr[1]);
+  var mltple = max;
+
+  for (var i = max; i >= min; i--) {
+    if (mltple % i !== 0) {
+      mltple += max;
+      i = max;
+    }
+  }
+
+  return mltple;
+}
