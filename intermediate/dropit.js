@@ -20,3 +20,8 @@ dropElements([1, 2, 3], function (n) {
 function dropElements2(arr, func) {
   return arr.slice(arr.find(func) ? arr.indexOf(arr.find(func)) : arr.length);
 }
+
+function dropElements3(arr, func) {
+  var index = arr.map(func).indexOf(true);
+  return index === -1 ? [] : arr.slice(index);
+}
