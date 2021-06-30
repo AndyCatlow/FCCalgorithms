@@ -16,3 +16,7 @@ function dropElements(arr, func) {
 dropElements([1, 2, 3], function (n) {
   return n < 3;
 });
+
+function dropElements2(arr, func) {
+  return arr.slice(arr.find(func) ? arr.indexOf(arr.find(func)) : arr.length);
+}
