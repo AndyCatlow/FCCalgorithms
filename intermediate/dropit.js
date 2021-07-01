@@ -26,7 +26,13 @@ function dropElements3(arr, func) {
   return index === -1 ? [] : arr.slice(index);
 }
 
+// doesn't return empty array for:
+// dropElements([1, 2, 3, 4], function(n) {return n > 5;})
 function dropElements4(arr, func) {
-  // find first index of function being true
-  // slice array from index to end
+  return arr.slice(arr.indexOf(arr.find(func)));
+}
+
+// if arr.find(func) is true anywhere the array is sliced there, if not an empty array os returned
+function dropElements5(arr, func) {
+  return arr.find(func) ? arr.slice(arr.indexOf(arr.find(func))) : [];
 }
