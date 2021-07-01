@@ -25,3 +25,8 @@ function dropElements3(arr, func) {
   var index = arr.map(func).indexOf(true);
   return index === -1 ? [] : arr.slice(index);
 }
+
+function dropElements4(arr, func) {
+  // find first index of function being true
+  // slice array from index to end
+}
