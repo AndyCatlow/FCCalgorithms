@@ -3,15 +3,22 @@
 
 // The binary string will be space separated.
 
+// function binaryAgent(str) {
+//   let binaryArray = str.split(" ");
+
+//   let charArray = binaryArray.map((bin) =>
+//     String.fromCharCode(parseInt(bin, 2))
+//   );
+
+//   console.log(charArray.join(""));
+//   return str;
+// }
+
 function binaryAgent(str) {
-  let binaryArray = str.split(" ");
-
-  let charArray = binaryArray.map((bin) =>
-    String.fromCharCode(parseInt(bin, 2))
-  );
-
-  console.log(charArray.join(""));
-  return str;
+  return str
+    .split(" ")
+    .map((bin) => String.fromCharCode(parseInt(bin, 2)))
+    .join("");
 }
 
 binaryAgent(
