@@ -9,3 +9,7 @@
 // sumTwoAnd(3) returns 5.
 
 // If either argument isn't a valid number, return undefined.
+
+function addTogether() {}
+
+addTogether(2, 3);
