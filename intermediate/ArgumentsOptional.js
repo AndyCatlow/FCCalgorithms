@@ -10,12 +10,20 @@
 
 // If either argument isn't a valid number, return undefined.
 
+// function addTogether() {
+//   let args = Array.from(arguments);
+//   let sum = args.reduce((a, b) => {
+//     return a + b;
+//   });
+//   console.log(sum);
+// }
+
+// addTogether(2, 3);
+
 function addTogether() {
-  let args = Array.from(arguments);
-  let sum = args.reduce((a, b) => {
+  return Array.from(arguments).reduce((a, b) => {
     return a + b;
   });
-  console.log(sum);
 }
 
-addTogether(2, 3);
+addTogether(2, 4);
