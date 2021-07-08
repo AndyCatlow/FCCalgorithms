@@ -10,6 +10,12 @@
 
 // If either argument isn't a valid number, return undefined.
 
-function addTogether() {}
+function addTogether() {
+  let args = Array.from(arguments);
+  let sum = args.reduce((a, b) => {
+    return a + b;
+  });
+  console.log(sum);
+}
 
 addTogether(2, 3);
