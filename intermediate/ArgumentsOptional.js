@@ -20,10 +20,18 @@
 
 // addTogether(2, 3);
 
+// function addTogether() {
+//   return Array.from(arguments).reduce((a, b) => {
+//     return a + b;
+//   });
+// }
+
 function addTogether() {
-  return Array.from(arguments).reduce((a, b) => {
-    return a + b;
-  });
+  if (typeof arguments[0] === "number" && typeof arguments[1] === "number") {
+    return arguments[0] + arguments[1];
+  } else {
+    return undefined;
+  }
 }
 
 addTogether(2, 4);
