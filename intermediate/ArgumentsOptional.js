@@ -26,12 +26,28 @@
 //   });
 // }
 
-function addTogether() {
-  if (typeof arguments[0] === "number" && typeof arguments[1] === "number") {
-    return arguments[0] + arguments[1];
-  } else {
-    return undefined;
+// function addTogether() {
+//   if (typeof arguments[0] === "number" && typeof arguments[1] === "number") {
+//     return arguments[0] + arguments[1];
+//   } else {
+//     return undefined;
+//   }
+// }
+
+// addTogether(2, 4);
+
+function addTogether(a, b) {
+  if (Number.isFinite(a)) {
+    if (!b) {
+      return function (c) {
+        if (Number.isFinite(c)) {
+          return a + c;
+        }
+      };
+    } else if (Number.isFinite(b)) {
+      return a + b;
+    }
   }
 }
 
-addTogether(2, 4);
+addTogether(2, 3);
