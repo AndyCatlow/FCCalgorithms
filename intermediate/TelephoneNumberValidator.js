@@ -18,6 +18,8 @@ function telephoneCheck(str) {
 
 telephoneCheck("55 55-55-555-5");
 
+// regex explanation here: https://www.codegrepper.com/code-examples/javascript/US+telephone+number+validator+javascript
+
 // needs to be false "1 555)555-5555" as only one bracket & "555)-555-5555" & "(555-555-5555" & "(555-555-5555"
 // needs to be false "(6054756961)" brackets in wrong place
 // false "-1 (757) 622-7382" starts with -1
