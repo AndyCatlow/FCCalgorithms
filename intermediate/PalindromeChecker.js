@@ -8,3 +8,18 @@
 // We'll pass strings with varying formats, such as racecar, RaceCar, and race CAR among others.
 
 // We'll also pass strings with special symbols, such as 2A3*3a2, 2A3 3a2, and 2_A3*3#A2.
+
+function palindrome(str) {
+  let arr = str
+    .replace(/[^0-9a-z]/gi, "")
+    .toLowerCase()
+    .split("");
+  for (let i = 0; i < arr.length / 2; i++) {
+    if (arr[i] !== arr[arr.length - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+palindrome("eye");
