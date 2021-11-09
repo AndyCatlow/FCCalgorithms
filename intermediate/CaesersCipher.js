@@ -6,3 +6,19 @@
 // Write a function which takes a ROT13 encoded string as input and returns a decoded string.
 
 // All letters will be uppercase. Do not transform any non-alphabetic character (i.e. spaces, punctuation), but do pass them on.
+
+function rot13(str) {
+  const input = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  const output = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+  const index = (x) => input.indexOf(x);
+
+  let translate = (x) => (index(x) > -1 ? output[index(x)] : x);
+
+  let code = str.split("").map(translate).join("");
+
+  console.log(code);
+  return code;
+}
+
+rot13("SERR PBQR PNZC");
